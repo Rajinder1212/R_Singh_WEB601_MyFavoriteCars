@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./content-card.component.scss']
 })
 export class ContentCardComponent {
+contentItem = {
+  id:1,
+  body:'Testing',
+  type:'testing'
+}
 
 }

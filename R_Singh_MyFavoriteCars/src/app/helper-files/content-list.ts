@@ -1,3 +1,5 @@
+import { Content } from "./content-interface";
+
 class ContentList{
     private item: Content[] ;
     constructor(item: Content){
