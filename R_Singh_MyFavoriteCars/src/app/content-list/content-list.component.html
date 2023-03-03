@@ -1,11 +1,18 @@
 <!-- <p>content-list works!</p> -->
-<button onclick='searchByTitle()'>Search</button>
-<div ngFor*="let content of contentArray"> -->
+<input type="text">
+<button (click)='searchByTitle()'>Search</button>
+<div ngFor*="let content of contentArray">
     <div class="elements">
         <h1 [innerHTML]="content.title"></h1>
         <p [innerHTML]="content.description"></p>
         <p [innerHTML]="content.creator"></p>
-        <p [innerHTML]="content.imgURL"></p>
+        <!-- <p [innerHTML]="content.imgURL"></p> -->
         <p [innerHTML]="content.type"></p>
+        <div *ngIf="content.imgURL; else noImage">
+            <img [src]="content.imgURL" (click)="logId(content)">
+        </div>
+        <ng-template #noImage>
+            <img src="https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=1200">
+        </ng-template>
     </div>
 </div>
