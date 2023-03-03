@@ -1,0 +1,10 @@
+<!-- <p>content-list works!</p> -->
+<div ngFor*="let content of contentArray"> -->
+    <div class="elements">
+        <h1 [innerHTML]="content.title"></h1>
+        <p [innerHTML]="content.description"></p>
+        <p [innerHTML]="content.creator"></p>
+        <p [innerHTML]="content.imgURL"></p>
+        <p [innerHTML]="content.type"></p>
+    </div>
+</div>
