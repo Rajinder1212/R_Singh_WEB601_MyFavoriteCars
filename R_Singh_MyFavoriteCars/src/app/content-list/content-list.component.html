@@ -7,7 +7,10 @@
         <p [innerHTML]="content.description"></p>
         <p [innerHTML]="content.creator"></p>
         <!-- <p [innerHTML]="content.imgURL"></p> -->
-        <p [innerHTML]="content.type"></p>
+        <p [innerHTML]="content.type" appHoverAffect [styleOnHover]='underline' ></p>
+        <div>
+            <span *ngFor="let tag of content.tags" appHovereffects [styleOnTags]="'bold'">{{tag}}, </span>
+        </div>
         <div *ngIf="content.imgURL; else noImage">
             <img [src]="content.imgURL" (click)="logId(content)">
         </div>
