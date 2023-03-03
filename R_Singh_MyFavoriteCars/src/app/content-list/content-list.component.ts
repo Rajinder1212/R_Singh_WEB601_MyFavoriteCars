@@ -51,6 +51,22 @@ constructor(){
   imgURL : 'https://en.wikipedia.org/wiki/Chevrolet_Corvette',
   type : 'Chevrolet Corvette'
 },
+{
+  id: 6 ,
+  title : 'Mercedes',
+  description : 'Mercedes-Benz, commonly referred to as Mercedes and sometimes as Benz, is a German luxury and commercial vehicle automotive brand established in 1926. Mercedes-Benz AG is headquartered in Stuttgart, Baden-Württemberg, Germany. ',
+  creator:'Karl Benz',
+  imgURL : 'https://en.wikipedia.org/wiki/Mercedes-Benz',
+  type : 'G Wagan '
+},
+{
+  id: 7 ,
+  title : 'Jaguar',
+  description : 'Founded, 26 October 1933; 89 years ago (1933-10-26) ; Founder, William Lyons ; Fate, Car manufacturing merged with Land Rover in 2013 as Jaguar Land Rover. ',
+  creator:'Willam Lyons',
+  imgURL : 'https://en.wikipedia.org/wiki/Jaguar_Cars',
+  type : 'Jaguar '
+}
   ]
 }
 }
