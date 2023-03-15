@@ -1,6 +1,8 @@
 
 <div>
     <app-create-content (onCreation)="addContent($event)"></app-create-content>
+
+    <p *ngIf="errorTxt">Failes to add Content</p>
 </div>
 
 <input type="text">

@@ -10,11 +10,20 @@ export class ContentListComponent {
 contentArray : Content[];
 Title: string = '';
 ifTitleExists : boolean | null = null;
+errorText:boolean=false;
 
 addContent(newContent: Content){
+  const AddPromise = new Promise((resolve, reject)=>{
   this.contentArray.push(newContent);
   this.contentArray = [...this.contentArray];
   console.log('Content was added successfully, Titlt: $(newContent.title)');
+});
+AddPromise.then(data =>{
+  console.log(`content Added successfully with title: ${data}`);
+  this.errorText =false;
+}).catch(err=>{
+  this.errorText =true;
+});
 }
 searchByTitle(){
   this.ifTitleExists = this.contentArray.some(content => content.title === this.Title);
