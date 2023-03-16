@@ -12,4 +12,8 @@ export class ContentService {
     getContent() : Observable<Content[]>{
       return of(contentArray)
     }
+    getContentById(id: number): Observable<any> {
+      const content = contentArray.find(c => c.id === id);
+      return of(content);
+    }
 }
