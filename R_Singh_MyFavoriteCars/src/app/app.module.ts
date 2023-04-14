@@ -6,13 +6,8 @@ import { ContentCardComponent } from './content-card/content-card.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { ContentListPipe } from './content-list/content-list.pipe';
 import { HoverAffectDirective } from './hover-affect.directive';
-import { MessagesComponent } from './messages/messages.component';
-import { HttpClientModule } from
-"@angular/common/http";
-import { HttpClientInMemoryWebApiModule } from
-"angular-in-memory-web-api";
-import { InMemoryDataService } from "./services/inmemory-data.service";
 import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,8 +15,6 @@ import { ModifyContentComponentComponent } from './modify-content-component/modi
     ContentListComponent,
     ContentListPipe,
     HoverAffectDirective,
-    MessagesComponent,
-    HttpClientModule,
     ModifyContentComponentComponent,
   ],
   imports: [
