@@ -8,7 +8,9 @@ import { ContentListPipe } from './content-list/content-list.pipe';
 import { HoverAffectDirective } from './hover-affect.directive';
 import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatButtonModule} from
+'@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
