@@ -1,8 +1,32 @@
-<div>
-    <p>Title : <input type="text" [(ngmodule)]="newContent.title"></p>
-    <p>Description : <input type="text" [(ngmodule)]="newContent.description"></p>
-    <p>Creator : <input type="text" [(ngmodule)]="newContent.creator"></p>
-    <p>Type : <input type="text" [(ngmodule)]="newContent.type"></p>
 
-    <button (click)="addContentToList()">Add Content</button>
+<mat-form-field>
+    <input matInput placeholder="Enter Text Here" #cardName />
+</mat-form-field>
+
+<div style="padding: 0px 0 10px 0">
+    <button mat-raised-button color="primary" (click)="clickEvent(cardName.value)">
+        Click me for an update!
+    </button>
+</div>
+
+<mat-form-field style="padding:10px 0">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+
+<div *ngFor="let content of contentListItems; let i =index" style="padding-bottom:20px">
+    <img [src]="content.imgURL" (click)="clickHandler(i)" alt={{content.title}} style="height:50px">
+    <h2>{{content.title}}</h2>
+    <div>{{content.description}}</div>
+    <div>Creator: {{content.creator}}</div>
+    <div>Type: {{content.type}}</div>
+    <div>Tags: 
+        <ng-container *ngFor="let tag of content.tags">
+            {{tag}},
+        </ng-container>
+    </div>
 </div>
