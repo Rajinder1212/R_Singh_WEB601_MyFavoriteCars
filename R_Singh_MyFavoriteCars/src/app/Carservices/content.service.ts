@@ -2,14 +2,18 @@ import { Injectable } from '@angular/core';
 import { Content } from '../content';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
+  
 })
 
 export class ContentService {
-
-  constructor(private http: HttpClient) { }
+  id!: number;
+  content!: Content;
+  constructor(private route: ActivatedRoute,
+    private contentService: ContentService) { }
 
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-type':'application/json' })
