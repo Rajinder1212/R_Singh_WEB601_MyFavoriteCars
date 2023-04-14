@@ -7,6 +7,7 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { ContentListPipe } from './content-list/content-list.pipe';
 import { HoverAffectDirective } from './hover-affect.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContentListComponent,
     ContentListPipe,
     HoverAffectDirective,
+    ContentDetailComponent,
   ],
   imports: [
     BrowserModule,
